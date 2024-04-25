@@ -15,3 +15,17 @@ function renderLicenseLink(license) {
     }
     return '';
 }
+
+// function to render license section on the readme.md
+function renderLicenseSection(license) {
+    if (license !== 'None') {
+        return (
+            `## License
+
+This project is licensed under the ${license} license.`
+        );
+    }
+    return '';
+}
+
+// function to generate markdown for README
