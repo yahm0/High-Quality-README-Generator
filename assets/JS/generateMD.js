@@ -29,3 +29,13 @@ This project is licensed under the ${license} license.`
 }
 
 // function to generate markdown for README
+function generateMarkdown(data) {
+    return `# ${data.title}
+
+${renderLicenseBadge(data.license)}
+
+## Description
+
+${data.description}
+
+## Table of Contents
