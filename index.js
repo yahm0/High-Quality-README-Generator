@@ -55,6 +55,19 @@ const questions = [
 
 
 // Function to write README file
+// Function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+    if (err) {
+        console.error('Error writing README file:', err);
+    } else {
+        console.log('README.md file has been successfully generated!');
+    }
+    });
+}
+
+// Function to initialize app
+
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const markdown = generateMarkdown(answers);
@@ -69,16 +82,4 @@ function init() {
 }
 
 // Function call to initialize app
-
-function init() {
-    inquirer.prompt(questions).then((answers) => {
-        const markdown = generateMarkdown(answers);
-        fs.writeFile('README.md', markdown, (err) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log('README.md has been generated!');
-            }
-        });
-    });
-}
+init();
