@@ -1,7 +1,7 @@
 // Author: Adam Nuccio
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./generateMD.js');
+const generateMarkdown = require('./assets/js/generateMD.js');
 
 // Array of questions for user input and license choices
 const questions = [
