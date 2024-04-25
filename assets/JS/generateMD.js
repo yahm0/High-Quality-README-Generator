@@ -55,3 +55,21 @@ ${data.installation}
 ## Usage
 
 ${data.usage}
+
+${renderLicenseSection(data.license)}
+
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+If you have any questions, please contact me at ${data.email}. You can find more of my work at [${data.github}] (
+`;                  
+}
+
+module.exports = generateMarkdown;
